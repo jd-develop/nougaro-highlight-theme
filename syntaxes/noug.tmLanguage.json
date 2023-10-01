@@ -88,15 +88,15 @@
             "patterns": [
                 {
                     "name": "constant.numeric.hex.noug",
-                    "match": "\\b0(x|X)[0-9a-fA-F]+\\b"
+                    "match": "\\b0(x|X)[0-9a-fA-F]+([eE]-?[0-9]+)?\\b"
                 },
                 {
                     "name": "constant.numeric.binary.noug",
-                    "match": "\\b0(b|B)[01]+\\b"
+                    "match": "\\b0(b|B)[01]+([eE]-?[0-9]+)?\\b"
                 },
                 {
                     "name": "constant.numeric.octal.noug",
-                    "match": "\\b0(o|O)[0-7]+\\b"
+                    "match": "\\b0(o|O)[0-7]+([eE]-?[0-9]+)?\\b"
                 },
                 {
                     "name": "constant.numeric.noug",
