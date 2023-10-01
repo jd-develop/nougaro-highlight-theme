@@ -6,22 +6,16 @@
             "include": "#keywords"
         },
         {
-            "include": "#strings-double-quotes"
+            "include": "#strings"
         },
         {
-            "include": "#strings-single-quotes"
-        },
-        {
-            "include": "#builtin-functions"
-        },
-        {
-            "include": "#builtin-variables-and-names"
+            "include": "#builtins"
         },
         {
             "include": "#comments"
         },
         {
-            "include": "#block-comments"
+            "include": "#numbers"
         }
     ],
     "repository": {
@@ -37,50 +31,78 @@
                 }
             ]
         },
-        "builtin-variables-and-names": {
-            "patterns": [{
-                "name": "variable.language.noug",
-                "match": "\\b(null|True|False|None|__noug_version__|__python_version__|__exec_from__|__symbol_table__|__os_name__|__os_release__|__os_version__|__base_value__|__disclaimer_of_warranty__|__noug_dir__|answerToTheLifeTheUniverseAndEverything|debug|hello|lorem|math|random|statistics|time)\\b"
-            }]
-        },
-
-        "builtin-functions": {
-            "patterns": [{
-                "name": "entity.name.function.noug",
-                "match": "\\b(print|void|print_ret|input|input_int|input_num|clear|is_int|is_float|is_num|is_str|is_list|is_func|is_module|is_none|append|pop|insert|extend|get|replace|exit|type|__py_type__|str|int|float|max|min|system_call|run|example|len|split|lower|upper|chr|ord|nougaro|__gpl__|round|__test__|__is_keyword__|__is_valid_token_type__|sort|reverse)\\b"
-            }]
-        },
-        "strings-double-quotes": {
-            "name": "string.quoted.double.noug",
-            "begin": "\"",
-            "end": "\"",
+        "builtins": {
             "patterns": [
                 {
-                    "name": "constant.character.escape.noug",
-                    "match": "\\\\."
+                    "name": "variable.language.noug",
+                    "match": "\\b(null|True|False|None|__noug_version__|__python_version__|__exec_from__|__symbol_table__|__os_name__|__os_release__|__os_version__|__base_value__|__disclaimer_of_warranty__|__noug_dir__|answerToTheLifeTheUniverseAndEverything|debug|hello|lorem|math|random|statistics|time)\\b"
+                },
+                {
+                    "name": "entity.name.function.noug",
+                    "match": "\\b(print|void|print_ret|input|input_int|input_num|clear|is_int|is_float|is_num|is_str|is_list|is_func|is_module|is_none|append|pop|insert|extend|get|replace|exit|type|__py_type__|str|int|float|max|min|system_call|run|example|len|split|lower|upper|chr|ord|nougaro|__gpl__|round|__test__|__is_keyword__|__is_valid_token_type__|sort|reverse)\\b"
                 }
             ]
         },
-        "strings-single-quotes": {
-            "name": "string.quoted.single.noug",
-            "begin": "'",
-            "end": "'",
+        "strings": {
             "patterns": [
                 {
-                    "name": "constant.character.escape.noug",
-                    "match": "\\\\."
+                    "name": "string.quoted.double.noug",
+                    "begin": "\"",
+                    "end": "\"",
+                    "patterns": [
+                        {
+                            "name": "constant.character.escape.noug",
+                            "match": "\\\\."
+                        }
+                    ]
+                },
+                {
+                    "name": "string.quoted.single.noug",
+                    "begin": "'",
+                    "end": "'",
+                    "patterns": [
+                        {
+                            "name": "constant.character.escape.noug",
+                            "match": "\\\\."
+                        }
+                    ]
                 }
             ]
         },
         "comments": {
-            "name": "comment.line.number-sign",
-            "begin": "#",
-            "end": "\n"
+            "patterns": [
+                {
+                    "name": "comment.line.number-sign.noug",
+                    "begin": "#",
+                    "end": "\n"
+                },
+                {
+                    "name": "comment.block.noug",
+                    "begin": "/\\*",
+                    "end": "\\*/"
+                }
+            ]
+            
         },
-        "block-comments": {
-            "name": "comment.block",
-            "begin": "/\\*",
-            "end": "\\*/"
+        "numbers": {
+            "patterns": [
+                {
+                    "name": "constant.numeric.hex.noug",
+                    "match": "\\b0(x|X)[0-9a-fA-F]+\\b"
+                },
+                {
+                    "name": "constant.numeric.binary.noug",
+                    "match": "\\b0(b|B)[01]+\\b"
+                },
+                {
+                    "name": "constant.numeric.octal.noug",
+                    "match": "\\b0(o|O)[0-7]+\\b"
+                },
+                {
+                    "name": "constant.numeric.noug",
+                    "match": "\\b[0-9]+(\\.[0-9]?+)?([eE]-?[0-9]+)?\\b"
+                }
+            ]
         }
     },
     "scopeName": "source.nougaro"
