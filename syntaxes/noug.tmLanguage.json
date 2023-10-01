@@ -18,7 +18,10 @@
             "include": "#builtin-variables-and-names"
         },
         {
-            "include": "#line-comments"
+            "include": "#comments"
+        },
+        {
+            "include": "#block-comments"
         }
     ],
     "repository": {
@@ -70,13 +73,14 @@
             ]
         },
         "comments": {
-            "patterns": [
-                {
-                    "name": "comment.line",
-                    "begin": "#",
-                    "end": "\n"
-                }
-            ]
+            "name": "comment.line.number-sign",
+            "begin": "#",
+            "end": "\n"
+        },
+        "block-comments": {
+            "name": "comment.block",
+            "begin": "/\\*",
+            "end": "\\*/"
         }
     },
     "scopeName": "source.nougaro"
