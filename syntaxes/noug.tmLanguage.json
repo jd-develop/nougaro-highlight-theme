@@ -1,0 +1,83 @@
+{
+    "$schema": "https://raw.githubusercontent.com/martinring/tmlanguage/master/tmlanguage.json",
+    "name": "nougaro",
+    "patterns": [
+        {
+            "include": "#keywords"
+        },
+        {
+            "include": "#strings-double-quotes"
+        },
+        {
+            "include": "#strings-single-quotes"
+        },
+        {
+            "include": "#builtin-functions"
+        },
+        {
+            "include": "#builtin-variables-and-names"
+        },
+        {
+            "include": "#line-comments"
+        }
+    ],
+    "repository": {
+        "keywords": {
+            "patterns": [
+                {
+                    "name": "keyword.control.noug",
+                    "match": "\\b(var|del|end|if|then|elif|else|for|while|do|loop|break|continue|def|return|class|import|export|write|read|assert)\\b"
+                },
+                {
+                    "name": "keyword.operator.noug",
+                    "match": "\\b(and|or|not|xor|in|to|step)\\b"
+                }
+            ]
+        },
+        "builtin-variables-and-names": {
+            "patterns": [{
+                "name": "variable.language.noug",
+                "match": "\\b(null|True|False|None|__noug_version__|__python_version__|__exec_from__|__symbol_table__|__os_name__|__os_release__|__os_version__|__base_value__|__disclaimer_of_warranty__|__noug_dir__|answerToTheLifeTheUniverseAndEverything|debug|hello|lorem|math|random|statistics|time)\\b"
+            }]
+        },
+
+        "builtin-functions": {
+            "patterns": [{
+                "name": "entity.name.function.noug",
+                "match": "\\b(print|void|print_ret|input|input_int|input_num|clear|is_int|is_float|is_num|is_str|is_list|is_func|is_module|is_none|append|pop|insert|extend|get|replace|exit|type|__py_type__|str|int|float|max|min|system_call|run|example|len|split|lower|upper|chr|ord|nougaro|__gpl__|round|__test__|__is_keyword__|__is_valid_token_type__|sort|reverse)\\b"
+            }]
+        },
+        "strings-double-quotes": {
+            "name": "string.quoted.double.noug",
+            "begin": "\"",
+            "end": "\"",
+            "patterns": [
+                {
+                    "name": "constant.character.escape.noug",
+                    "match": "\\\\."
+                }
+            ]
+        },
+        "strings-single-quotes": {
+            "name": "string.quoted.single.noug",
+            "begin": "'",
+            "end": "'",
+            "patterns": [
+                {
+                    "name": "constant.character.escape.noug",
+                    "match": "\\\\."
+                }
+            ]
+        },
+        "comments": {
+            "patterns": [
+                {
+                    "name": "comment.line",
+                    "begin": "#",
+                    "end": "\n"
+                }
+            ]
+        }
+    },
+    "scopeName": "source.nougaro"
+}

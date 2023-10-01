@@ -1,0 +1,25 @@
+{
+  "name": "nougaro-highlight-theme",
+  "displayName": "Nougaro Language Support",
+  "description": "The language support for the Nougaro programming language",
+  "version": "0.0.1",
+  "engines": {
+    "vscode": "^1.82.0"
+  },
+  "categories": [
+    "Programming Languages"
+  ],
+  "contributes": {
+    "languages": [{
+      "id": "noug",
+      "aliases": ["nougaro", "noug"],
+      "extensions": [".noug"],
+      "configuration": "./language-configuration.json"
+    }],
+    "grammars": [{
+      "language": "noug",
+      "scopeName": "source.nougaro",
+      "path": "./syntaxes/noug.tmLanguage.json"
+    }]
+  }
+}
