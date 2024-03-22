@@ -1,22 +1,22 @@
-# nougaro-highlight-theme README
+# Nougaro highlight theme
 
-This is the README for your extension "nougaro-highlight-theme". After writing up a brief description, we recommend including the following sections.
+Provides syntax highlighting for the [Nougaro programming language](https://github.com/jd-develop/nougaro). For now, the exttension doesn’t really work and is a work-in-progress.
 
 ## Features
 
-Describe specific features of your extension including screenshots of your extension in action. Image paths are relative to this README file.
+<!-- Describe specific features of your extension including screenshots of your extension in action. Image paths are relative to this README file.
 
 For example if there is an image subfolder under your extension project workspace:
 
 \!\[feature X\]\(images/feature-x.png\)
 
-> Tip: Many popular extensions utilize animations. This is an excellent way to show off your extension! We recommend short, focused animations that are easy to follow.
+> Tip: Many popular extensions utilize animations. This is an excellent way to show off your extension! We recommend short, focused animations that are easy to follow. -->
 
-## Requirements
+<!-- ## Requirements
 
-If you have any requirements or dependencies, add a section describing those and how to install and configure them.
+If you have any requirements or dependencies, add a section describing those and how to install and configure them. -->
 
-## Extension Settings
+<!-- ## Extension Settings
 
 Include if your extension adds any VS Code settings through the `contributes.configuration` extension point.
 
@@ -25,9 +25,9 @@ For example:
 This extension contributes the following settings:
 
 * `myExtension.enable`: Enable/disable this extension.
-* `myExtension.thing`: Set to `blah` to do something.
+* `myExtension.thing`: Set to `blah` to do something. -->
 
-## Known Issues
+<!-- ## Known Issues
 
 Calling out known issues can help limit users opening duplicate issues against your extension.
 
@@ -63,3 +63,4 @@ You can author your README using Visual Studio Code. Here are some useful editor
 * [Markdown Syntax Reference](https://help.github.com/articles/markdown-basics/)
 
 **Enjoy!**
+-->
