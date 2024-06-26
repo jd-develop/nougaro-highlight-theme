@@ -38,7 +38,7 @@
             "patterns": [
                 {
                     "name": "variable.language.noug",
-                    "match": "\\b(null|True|False|None|__noug_version__|__python_version__|__exec_from__|__symbol_table__|__os_name__|__os_release__|__os_version__|__base_value__|__disclaimer_of_warranty__|__noug_dir__|__version_id__|__data_version__|answerToTheLifeTheUniverseAndEverything|debug|hello|lorem|math|random|statistics|time|unicodedata|_conffiles|noug_version|__args__|__actual_context__)\\b"
+                    "match": "\\b(this|null|True|False|None|__noug_version__|__python_version__|__exec_from__|__symbol_table__|__os_name__|__os_release__|__os_version__|__base_value__|__disclaimer_of_warranty__|__noug_dir__|__version_id__|__data_version__|answerToTheLifeTheUniverseAndEverything|debug|hello|lorem|math|random|statistics|time|unicodedata|_conffiles|noug_version|__args__|__actual_context__)\\b"
                 },
                 {
                     "name": "entity.name.function.noug",
@@ -133,7 +133,11 @@
             "patterns": [
                 {
                     "name": "variable.noug",
-                    "match": "[a-zA-Z\\_][a-zA-Z\\_0-9]?+"
+                    "match": "[a-zA-Z\\_](([a-zA-Z\\_0-9])?)*"
+                },
+                {
+                    "name": "variable.default.noug",
+                    "match": "<default>"
                 }
             ]
         }
