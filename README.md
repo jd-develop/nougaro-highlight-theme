@@ -1,8 +1,10 @@
 # Nougaro highlight theme
 
-Provides syntax highlighting for the [Nougaro programming language](https://github.com/jd-develop/nougaro). For now, the exttension doesn’t really work and is a work-in-progress.
+Provides syntax highlighting for the [Nougaro programming language](https://github.com/jd-develop/nougaro). The extension works for the most common usages, but for sure needs fixes.
 
 ## Features
+
+Just syntax highlighting (no context, no intellisense, etc.)
 
 <!-- Describe specific features of your extension including screenshots of your extension in action. Image paths are relative to this README file.
 
@@ -29,27 +31,13 @@ This extension contributes the following settings:
 
 <!-- ## Known Issues
 
-Calling out known issues can help limit users opening duplicate issues against your extension.
+Calling out known issues can help limit users opening duplicate issues against your extension. -->
 
 ## Release Notes
 
-Users appreciate release notes as you update your extension.
+See [CHANGELOG.md](CHANGELOG.md).
 
-### 1.0.0
-
-Initial release of ...
-
-### 1.0.1
-
-Fixed issue #.
-
-### 1.1.0
-
-Added features X, Y, and Z.
-
----
-
-## Working with Markdown
+<!-- ## Working with Markdown
 
 You can author your README using Visual Studio Code. Here are some useful editor keyboard shortcuts:
 
